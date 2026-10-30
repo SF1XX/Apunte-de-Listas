@@ -22,3 +22,27 @@ INSERCIÓN - LISTAS SIMPLES
 	
 	*ant.prox:= q
 	*q.prox:= nil (o *q.prox:= p)
+
+-------------------------------------------
+
+Proceso
+	nuevo(q)
+	leer(*q.dato)
+	si prim = nil entonces
+		prim:= q
+		*p.prox:= nil
+	sino
+	p:= prim
+	ant:= nil
+	mientras (p <> nil) y (*p.dato < *q.dato) hacer
+		ant:= p
+		p:= *p.prox
+	fm
+	si p = prim entonces
+		prim:= q
+		*q.prox:= p
+	sino
+		*ant.prox:= q
+		*q.prox:= p
+	fs
+finaccion

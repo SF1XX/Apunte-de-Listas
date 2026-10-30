@@ -17,4 +17,31 @@ ELIMINACIÓN - LISTAS SIMPLES
 4- eliminación del ultimo nodo
 	*p.prox = nil
 
-	*ant.prox:= nil (o ant.prox:= *p.prox)
+	*ant.prox:= nil (o *ant.prox:= *p.prox)
+
+
+---------------------------------------------------------
+
+Proceso
+	si prim = nil entonces
+		esc('lista vacia')
+	sino
+		leer(valor)
+		p:= prim
+		ant:= nil
+		mientras (p <> nil) y (*p.dato <> *q.dato) hcaer
+			ant:= p
+			p:= *p.prox
+		fm
+		si prim = nil entoces
+			esc('dato no encontrado')
+		sino
+			si (p = prim) entonces
+				prim:= *p.prox
+			sino
+				ant.prox:= *p.prox
+			fs
+			disponer(p)
+		fs
+	fs
+finaccion
