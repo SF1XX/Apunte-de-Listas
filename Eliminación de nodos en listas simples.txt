@@ -1,0 +1,20 @@
+ELIMINACIÓN - LISTAS SIMPLES
+1- unico nodo
+	p = prim
+
+	prim:= nil (o prim:= *p.prox)
+
+2- eliminación del primer elemento
+	prim = p
+	
+	prim:= *p.prox
+	
+3- eliminación en el medio
+	*p.dato = buscado
+
+	*ant.prox:= *p.prox
+
+4- eliminación del ultimo nodo
+	*p.prox = nil
+
+	*ant.prox:= nil (o ant.prox:= *p.prox)
