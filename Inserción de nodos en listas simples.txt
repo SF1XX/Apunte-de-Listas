@@ -1,0 +1,24 @@
+INSERCIÓN - LISTAS SIMPLES
+1- lista vacia
+	prim = nil
+	
+	prim:= q
+	*q.prox:= nil; (o *p.prox:= nil);
+	
+2- inserción antes del primer elemento
+	prim = p
+	
+	prim:= q
+	*q.prox:= p
+
+3- inserción en el medio
+	*p.dato > q*dato
+	
+	*ant.prox:= q
+	*q.prox:= p
+
+4- inserción en la ultima posición
+	p = nil
+	
+	*ant.prox:= q
+	*q.prox:= nil (o *q.prox:= p)
